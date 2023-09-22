@@ -1,0 +1,159 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+.thumbnail {
+  width: 100%; /*Image takes 100% of its container*/
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr; /*profile picture - video info*/
+}
+
+.profile-pic {
+  width: 36px;
+  border-radius: 50px;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  width: 100%;
+  font-size: 12px;
+  color: #606060;
+}
+
+.video-author {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.video-stats {
+  margin-bottom: 8px;
+}
+
+.video-time {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 4px 4px;
+  right: 5px;
+  bottom: 8px;
+  border-radius: 2px;
+}
+
+.video-title a {
+  all: unset;
+  cursor: pointer;
+}
+
+.channel-picture {
+  display: inline-block;
+  position: relative;
+}
+
+.channel-info-tooltip {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  position: absolute;
+  bottom: -30px;
+  background-color: white;
+  width: 230px;
+  border: none;
+  box-shadow: 8px 2px 10px rgba(0,0,0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.channel-picture:hover .channel-info-tooltip {
+  opacity: 1;
+}
+
+.channel-picture-tooltip {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.profile-pic-tooltip {
+  width: 55px;
+  border-radius: 45px;
+}
+
+.channel-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;  
+}
+
+.author-channel {
+  width: 100%;  
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.subscribers-channel {
+  font-size: 14px;
+  margin-top: 4px;
+  color: grey;
+}
+
+/*Smaller screen style*/
+@media only screen and (max-width: 870px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Tablet design*/
+@media only screen and (min-width: 871px) and (max-width: 1120) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*Desktop design*/
+@media only screen and (min-width: 1121px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .video-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }  
+
+  .video-author,
+  .video-stats {
+  font-size: 14px;
+  }
+}
+
+/*Very wide screen - other sidebar style*/
+@media only screen and (min-width: 1200px) {
+  .video-grid {
+    padding-left: 180px; /*Space for the sidebar*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+

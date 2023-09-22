@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+p {
+  margin-top: 0;  /*To get rid of default p margins*/
+  margin-bottom: 0; 
+}
+
+body {  
+  font-family: Roboto, Arial;
+  margin:0;
+  padding-top: 80px; /*Space for the header*/
+  padding-left: 96px; /*Space for the sidebar*/
+  padding-right: 24px;
+  background-color: rgb(247, 247, 247);
+}
